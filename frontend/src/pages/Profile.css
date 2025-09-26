@@ -1,0 +1,550 @@
+.profile-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 24px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 个人资料卡片 */
+.profile-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 个人资料头部 */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-upload-btn {
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.basic-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.basic-info .ant-typography {
+  margin: 0 !important;
+}
+
+.role-tag {
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.edit-btn {
+  border-radius: 20px;
+}
+
+/* 个人资料表单 */
+.profile-form {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* 个人详情 */
+.profile-details {
+  margin-top: 24px;
+}
+
+.bio-section {
+  margin-bottom: 20px;
+}
+
+.bio-section .ant-typography {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.info-item .anticon {
+  color: #8c8c8c;
+}
+
+.info-item a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+/* 技能标签 */
+.skills-section {
+  margin-top: 24px;
+}
+
+.skills-section .ant-typography {
+  margin-bottom: 12px !important;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  border-radius: 12px;
+  background: #f0f8ff;
+  border-color: #d6e4ff;
+  color: #1890ff;
+}
+
+/* 统计数据 */
+.stats-section {
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #262626;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 4px;
+}
+
+/* 标签页 */
+.profile-tabs {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.profile-tabs .ant-tabs-content-holder {
+  padding: 24px;
+}
+
+.profile-tabs .ant-tabs-tab {
+  padding: 16px 24px;
+  font-weight: 500;
+}
+
+/* 作品集卡片 */
+.portfolio-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.portfolio-card:hover .portfolio-cover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.portfolio-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.portfolio-stats span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 项目历史列表 */
+.project-history-list .project-history-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* 评价列表 */
+.reviews-list .review-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.review-date {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.review-content .ant-typography {
+  margin-bottom: 8px !important;
+  color: #666;
+  line-height: 1.6;
+}
+
+.review-project {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .profile-container {
+    padding: 16px 0;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .basic-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .skills-tags {
+    justify-content: center;
+  }
+
+  .portfolio-cover img {
+    height: 160px;
+  }
+
+  .project-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .review-date {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-tabs .ant-tabs-content-holder {
+    padding: 16px;
+  }
+
+  .stat-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .stat-icon {
+    font-size: 20px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .portfolio-cover img {
+    height: 140px;
+  }
+
+  .portfolio-stats {
+    gap: 8px;
+  }
+}
+
+/* 暗色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .profile-container {
+    background: #141414;
+  }
+
+  .profile-card,
+  .stat-card,
+  .profile-tabs {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+
+  .profile-form {
+    border-top-color: #303030;
+  }
+
+  .bio-section .ant-typography,
+  .info-item,
+  .review-content .ant-typography {
+    color: #b3b3b3;
+  }
+
+  .stat-number {
+    color: #fff;
+  }
+
+  .skill-tag {
+    background: #1f3a5f;
+    border-color: #2f4f7f;
+    color: #69b1ff;
+  }
+
+  .project-history-list .project-history-item,
+  .reviews-list .review-item {
+    border-bottom-color: #303030;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .profile-card,
+  .stat-card,
+  .profile-tabs,
+  .portfolio-card {
+    border: 2px solid #000;
+  }
+
+  .edit-btn,
+  .avatar-upload-btn {
+    border: 2px solid #1890ff;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .portfolio-card {
+    transition: none;
+  }
+
+  .stat-card:hover,
+  .portfolio-card:hover {
+    transform: none;
+  }
+
+  .portfolio-cover img,
+  .portfolio-overlay {
+    transition: none;
+  }
+
+  .portfolio-card:hover .portfolio-cover img {
+    transform: none;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .profile-container {
+    background: white;
+    padding: 0;
+  }
+
+  .avatar-upload-btn,
+  .edit-btn,
+  .form-actions {
+    display: none;
+  }
+
+  .profile-card,
+  .stat-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .portfolio-overlay {
+    display: none;
+  }
+}
+
+/* 无障碍支持 */
+.profile-card:focus-within,
+.stat-card:focus-within,
+.portfolio-card:focus-within {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+/* 加载状态 */
+.loading-skeleton {
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.empty-state .ant-empty-description {
+  color: #8c8c8c;
+  margin-top: 16px;
+}
