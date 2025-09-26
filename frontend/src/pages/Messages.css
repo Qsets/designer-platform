@@ -1,0 +1,409 @@
+.messages-container {
+  height: calc(100vh - 64px - 60px); /* 减去头部和底部导航高度 */
+  background: #f5f5f5;
+}
+
+.messages-layout {
+  height: 100%;
+  background: #fff;
+}
+
+/* 对话列表样式 */
+.conversations-sider {
+  border-right: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.conversations-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.conversations-header .ant-typography {
+  margin-bottom: 12px;
+}
+
+.conversations-list {
+  height: calc(100% - 120px);
+  overflow-y: auto;
+}
+
+.conversation-item {
+  padding: 12px 16px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+  position: relative;
+}
+
+.conversation-item:hover {
+  background: #f8f9fa;
+}
+
+.conversation-item.active {
+  background: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.conversation-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.conversation-title .name {
+  font-weight: 500;
+  color: #262626;
+}
+
+.conversation-title .time {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.conversation-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.last-message {
+  color: #8c8c8c;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.project-info {
+  margin-top: 4px;
+}
+
+.unread-badge {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 聊天区域样式 */
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #fff;
+}
+
+.chat-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat-details .ant-typography {
+  margin: 0;
+}
+
+.online-status {
+  font-size: 12px;
+  color: #52c41a;
+}
+
+.project-title {
+  font-size: 12px;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* 消息列表样式 */
+.messages-list {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.message-item {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.message-item.sent {
+  flex-direction: row-reverse;
+}
+
+.message-item.sent .message-content {
+  align-items: flex-end;
+}
+
+.message-avatar {
+  flex-shrink: 0;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  gap: 4px;
+}
+
+.message-bubble {
+  padding: 8px 12px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message-item.received .message-bubble {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  color: #262626;
+}
+
+.message-item.sent .message-bubble {
+  background: #1890ff;
+  color: #fff;
+}
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.message-status {
+  font-size: 11px;
+}
+
+.message-status.sending {
+  color: #faad14;
+}
+
+.message-status.sent {
+  color: #8c8c8c;
+}
+
+.message-status.read {
+  color: #52c41a;
+}
+
+/* 输入区域样式 */
+.message-input-area {
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  padding: 12px 20px;
+}
+
+.input-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.input-container {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.message-input {
+  flex: 1;
+}
+
+.message-input .ant-input {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  resize: none;
+}
+
+.send-button {
+  border-radius: 8px;
+  height: 32px;
+}
+
+/* 无对话状态 */
+.no-conversation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #fafafa;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .messages-container {
+    height: calc(100vh - 56px - 60px);
+  }
+
+  .conversations-sider {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .chat-content {
+    display: none;
+  }
+
+  .messages-container.chat-mode .conversations-sider {
+    display: none;
+  }
+
+  .messages-container.chat-mode .chat-content {
+    display: flex;
+  }
+
+  .conversation-title .name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .last-message {
+    max-width: 180px;
+  }
+
+  .message-content {
+    max-width: 85%;
+  }
+
+  .chat-header {
+    padding: 8px 16px;
+  }
+
+  .messages-list {
+    padding: 12px 16px;
+  }
+
+  .message-input-area {
+    padding: 8px 16px;
+  }
+}
+
+/* 暗色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .messages-container {
+    background: #141414;
+  }
+
+  .messages-layout,
+  .conversations-sider,
+  .chat-header,
+  .message-input-area {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+
+  .conversation-item {
+    border-color: #303030;
+  }
+
+  .conversation-item:hover {
+    background: #262626;
+  }
+
+  .conversation-item.active {
+    background: #111a2c;
+  }
+
+  .conversation-title .name {
+    color: #fff;
+  }
+
+  .messages-list {
+    background: #141414;
+  }
+
+  .message-item.received .message-bubble {
+    background: #262626;
+    border-color: #434343;
+    color: #fff;
+  }
+}
+
+/* 滚动条样式 */
+.conversations-list::-webkit-scrollbar,
+.messages-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversations-list::-webkit-scrollbar-track,
+.messages-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.conversations-list::-webkit-scrollbar-thumb,
+.messages-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.conversations-list::-webkit-scrollbar-thumb:hover,
+.messages-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 动画效果 */
+.message-item {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .conversation-item {
+    border: 1px solid #000;
+  }
+
+  .message-bubble {
+    border: 2px solid #000;
+  }
+
+  .message-item.sent .message-bubble {
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .conversation-item,
+  .message-item {
+    transition: none;
+    animation: none;
+  }
+}
