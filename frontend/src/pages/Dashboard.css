@@ -1,0 +1,376 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 24px 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 页面头部 */
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-header .ant-typography {
+  margin-bottom: 4px !important;
+}
+
+/* 统计卡片 */
+.stats-row {
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .ant-statistic-title {
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stat-card .ant-statistic-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 内容区域 */
+.content-row {
+  margin-bottom: 24px;
+}
+
+/* 标签页 */
+.dashboard-tabs {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.dashboard-tabs .ant-tabs-content-holder {
+  padding: 24px;
+}
+
+.dashboard-tabs .ant-tabs-tab {
+  padding: 16px 24px;
+  font-weight: 500;
+}
+
+/* 项目列表 */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card {
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  border-color: #1890ff;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.15);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-info .ant-typography {
+  margin: 0 !important;
+}
+
+.project-meta {
+  text-align: right;
+}
+
+.project-progress {
+  margin-bottom: 16px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deadline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #8c8c8c;
+}
+
+/* 任务列表 */
+.tasks-list .task-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 侧边栏 */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 通知卡片 */
+.notifications-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.notifications-list .notification-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.notifications-list .notification-item:last-child {
+  border-bottom: none;
+}
+
+.notifications-list .notification-item.unread {
+  background: #f0f8ff;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 4px 0;
+}
+
+.notifications-footer {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 12px;
+}
+
+/* 日历卡片 */
+.calendar-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* 管理和分析区域 */
+.management-section,
+.finance-section,
+.analytics-section {
+  min-height: 300px;
+}
+
+.progress-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .dashboard-header {
+    text-align: center;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .project-meta {
+    text-align: left;
+  }
+  
+  .task-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .task-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .project-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-container {
+    padding: 16px 0;
+  }
+  
+  .dashboard-tabs .ant-tabs-content-holder {
+    padding: 16px;
+  }
+  
+  .stat-card .ant-statistic-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 暗色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .dashboard-container {
+    background: #141414;
+  }
+  
+  .stat-card,
+  .dashboard-tabs,
+  .notifications-card,
+  .calendar-card {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+  
+  .project-card {
+    background: #1f1f1f;
+    border-color: #303030;
+  }
+  
+  .project-card:hover {
+    border-color: #1890ff;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .stat-card,
+  .project-card,
+  .notifications-card,
+  .calendar-card {
+    border-width: 2px;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .project-card {
+    transition: none;
+  }
+  
+  .stat-card:hover,
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .dashboard-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .dashboard-tabs .ant-tabs-tab-btn {
+    display: none;
+  }
+}
+
+/* 无障碍支持 */
+.stat-card:focus-within,
+.project-card:focus-within {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+/* 加载状态 */
+.loading-skeleton {
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.empty-state .ant-empty-description {
+  color: #8c8c8c;
+  margin-top: 16px;
+}
